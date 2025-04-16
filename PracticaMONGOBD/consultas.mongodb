@@ -1,0 +1,9 @@
+use ("dbClothingStore")
+//listar 2 clientes
+//db.clientes.find().limit(2)
+
+/* db.clientes.find(
+    {}, 
+    { _id: 0, Nombre: 1, Apellido: 1, CategoriasInteres: 1 }
+  ) */
+    db.prendas.find({ Stock: { $gte: 50 } })
