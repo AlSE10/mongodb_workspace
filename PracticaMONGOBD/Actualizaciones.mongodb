@@ -1,0 +1,21 @@
+/* db.prendas.updateOne(
+    { Nombre: "Vestido de Verano" },
+    { $set: { Nombre: "Vestido Elegante" } }
+)*/ 
+ /*  db.prendas.updateOne(
+    { Nombre: "Casaca de Cuero" },
+    { $set: { PrecioUnitario: 799 } }
+  ) */
+   /*  db.clientes.updateOne(
+        { Nombre: "Ana", Apellido: "Gómez" },
+        { $set: { FechaNacimiento: new Date("2006-06-06") } }
+      )
+       */
+
+
+    db.clientes.updateOne(
+        { Nombre: "Juan", Apellido: "Pérez" },
+        { $set: { Email: "juan.pe@yahoo.com" } }
+      )
+      
+  
