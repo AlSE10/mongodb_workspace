@@ -1,0 +1,27 @@
+use("baticell_store")
+db.clients.find(
+    {
+      "direccion": { $nin: [/Breña/, /La Molina/] }
+    },
+    {
+      "nombre": 1,
+      "apellidos": 1,
+      "email": 1,
+      "puntos": 1,
+      "_id": 0
+    }
+  ).sort({ "apellidos": -1 }) 
+ /*  db.clients.find(
+    {
+      "puntos": { $gte: 200, $lte: 300 }
+    },
+    {
+      "fechaRegistro": 1,
+      "nombre": 1,
+      "apellidos": 1,
+      "modeloFavorito": 1,
+      "puntos": 1,
+      "suscripciones": 1,
+      "_id": 0
+    }
+  ).sort({ "fechaRegistro": 1 }) */

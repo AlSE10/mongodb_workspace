@@ -1,0 +1,16 @@
+use("UrbanStyle_store_t2")
+db.factura.find(
+    {
+      totalFactura: { $gte: 150 },
+      "detalle.producto": /traje/i
+    },
+    {
+      _id: 0,
+      cliente: 1,
+      fecha: 1,
+      numeroFactura: 1,
+      totalFactura: 1,
+      descripcion: 1
+    }
+  ).sort({ fecha: -1 })
+  
