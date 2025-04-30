@@ -1,0 +1,7 @@
+use("baticell_store")
+
+const cursor=db.clients.find({
+    puntos:{$gt:300}
+})
+const totalClientes=cursor.count();
+"el total es :"+ totalClientes;
